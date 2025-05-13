@@ -1,0 +1,49 @@
+2025-05-08 10:16:52,618 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-08 10:16:52,618 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-08 10:16:52,618 - INFO -  * Restarting with stat
+2025-05-08 10:16:52,798 - WARNING -  * Debugger is active!
+2025-05-08 10:16:52,808 - INFO -  * Debugger PIN: 106-566-525
+2025-05-08 10:17:42,641 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-08 10:17:42,642 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-08 10:17:42,642 - INFO -  * Restarting with stat
+2025-05-08 10:17:42,778 - WARNING -  * Debugger is active!
+2025-05-08 10:17:42,784 - INFO -  * Debugger PIN: 408-623-329
+2025-05-08 10:19:33,872 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-08 10:19:33,872 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-08 10:19:33,873 - INFO -  * Restarting with stat
+2025-05-08 10:19:34,007 - WARNING -  * Debugger is active!
+2025-05-08 10:19:34,013 - INFO -  * Debugger PIN: 408-623-329
+2025-05-08 10:20:27,745 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-08 10:20:27,745 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-08 10:20:27,746 - INFO -  * Restarting with stat
+2025-05-08 10:20:27,884 - WARNING -  * Debugger is active!
+2025-05-08 10:20:27,891 - INFO -  * Debugger PIN: 408-623-329
+2025-05-08 10:21:31,326 - INFO -  * Detected change in '/Users/moffe/小贝智言/coding/wordwriter/app.py', reloading
+2025-05-08 10:21:31,353 - INFO -  * Restarting with stat
+2025-05-08 10:21:31,569 - WARNING -  * Debugger is active!
+2025-05-08 10:21:31,575 - INFO -  * Debugger PIN: 408-623-329
+2025-05-08 10:21:33,594 - INFO -  * Detected change in '/Users/moffe/小贝智言/coding/wordwriter/app.py', reloading
+2025-05-08 10:21:33,615 - INFO -  * Restarting with stat
+2025-05-08 10:21:33,763 - WARNING -  * Debugger is active!
+2025-05-08 10:21:33,769 - INFO -  * Debugger PIN: 408-623-329
+2025-05-08 10:22:03,590 - INFO - 127.0.0.1 - - [08/May/2025 10:22:03] "GET / HTTP/1.1" 200 -
+2025-05-08 10:22:06,763 - INFO - Generated worksheet: static/worksheet_20250508_102206.pdf with 30 words
+2025-05-08 10:22:06,766 - INFO - 127.0.0.1 - - [08/May/2025 10:22:06] "POST /generate HTTP/1.1" 200 -
+2025-05-13 19:45:02,479 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-13 19:45:02,479 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-13 19:45:02,479 - INFO -  * Restarting with stat
+2025-05-13 19:45:02,614 - WARNING -  * Debugger is active!
+2025-05-13 19:45:02,619 - INFO -  * Debugger PIN: 408-623-329
+2025-05-13 19:45:48,222 - INFO - 127.0.0.1 - - [13/May/2025 19:45:48] "GET / HTTP/1.1" 200 -
+2025-05-13 19:45:48,979 - INFO - 127.0.0.1 - - [13/May/2025 19:45:48] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-05-13 19:45:49,073 - INFO - 127.0.0.1 - - [13/May/2025 19:45:49] "GET / HTTP/1.1" 200 -
+2025-05-13 19:46:55,642 - INFO - Cleaned up old file: static/worksheet_20250508_102206.pdf
+2025-05-13 19:46:55,663 - INFO - Generated worksheet: static/worksheet_20250513_194655.pdf with 36 words
+2025-05-13 19:46:55,666 - INFO - 127.0.0.1 - - [13/May/2025 19:46:55] "POST /generate HTTP/1.1" 200 -
+2025-05-13 19:47:09,256 - INFO - Generated worksheet: static/worksheet_20250513_194709.pdf with 34 words
+2025-05-13 19:47:09,257 - INFO - 127.0.0.1 - - [13/May/2025 19:47:09] "POST /generate HTTP/1.1" 200 -

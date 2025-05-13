@@ -5,12 +5,22 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import cm
 import markdown
-from datetime import datetime
+from datetime import datetime, timedelta
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import math
+import logging
+from functools import wraps
+import time
+
+logging.basicConfig(
+    filename='wordwriter.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 app = Flask(__name__)
+app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024  # 限制请求大小为1MB
 
 # 注册楷体字体
 FONT_PATH = os.path.join(os.path.dirname(__file__), 'fonts', 'kaiti_GB2312.ttf')
@@ -128,20 +138,73 @@ class WordWriter:
 # 创建WordWriter实例
 writer = WordWriter()
 
+# 限制访问频率装饰器
+def limit_rate(seconds=1):
+    def decorator(f):
+        last_request = {}
+        @wraps(f)
+        def wrapped(*args, **kwargs):
+            now = time.time()
+            ip = request.remote_addr
+            if ip in last_request and now - last_request[ip] < seconds:
+                return '请求过于频繁，请稍后再试', 429
+            last_request[ip] = now
+            return f(*args, **kwargs)
+        return wrapped
+    return decorator
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
 @app.route('/generate', methods=['POST'])
+@limit_rate(1)  # 限制每秒最多一次请求
 def generate():
-    title = request.form.get('title', '每日练字')
     try:
-        word_count = int(request.form.get('word_count', 30))
-    except ValueError:
-        word_count = 30
-    output_file = f'static/worksheet_{datetime.now().strftime("%Y%m%d_%H%M%S")}.pdf'
-    writer.create_worksheet(output_file, title, word_count)
-    return send_file(output_file, as_attachment=True)
+        # 清理旧文件
+        cleanup_old_files()
+        
+        # 获取并验证输入
+        title = request.form.get('title', '每日练字')[:50]
+        try:
+            word_count = int(request.form.get('word_count', 30))
+            word_count = max(1, min(word_count, 100))
+        except ValueError:
+            word_count = 30
+        
+        # 生成文件
+        output_file = f'static/worksheet_{datetime.now().strftime("%Y%m%d_%H%M%S")}.pdf'
+        writer.create_worksheet(output_file, title, word_count)
+        
+        # 记录日志
+        logging.info(f'Generated worksheet: {output_file} with {word_count} words')
+        
+        return send_file(output_file, as_attachment=True)
+    except Exception as e:
+        logging.error(f'Error generating worksheet: {str(e)}')
+        return render_template('error.html', error=str(e)), 500
+
+def cleanup_old_files():
+    try:
+        static_dir = 'static'
+        current_time = datetime.now()
+        for filename in os.listdir(static_dir):
+            if filename.endswith('.pdf'):
+                file_path = os.path.join(static_dir, filename)
+                file_creation_time = datetime.fromtimestamp(os.path.getctime(file_path))
+                if (current_time - file_creation_time).days > 1:
+                    os.remove(file_path)
+                    logging.info(f'Cleaned up old file: {file_path}')
+    except Exception as e:
+        logging.error(f'Error cleaning up files: {str(e)}')
+
+@app.errorhandler(Exception)
+def handle_error(error):
+    return render_template('error.html', error=str(error)), 500
 
 if __name__ == '__main__':
-    app.run(debug=True) 
+    # 确保必要的目录存在
+    os.makedirs('static', exist_ok=True)
+    
+    # 启动应用
+    app.run(debug=True, host='127.0.0.1', port=5000) 
