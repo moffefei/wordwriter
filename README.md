@@ -1,6 +1,6 @@
-<img width="689" height="528" alt="image" src="https://github.com/user-attachments/assets/a233d91b-ba79-4824-af28-9071ebe5aecd" /># 汉字田字格练习生成器 (Chinese Character Grid Practice Generator)
+# 汉字田字格练习生成器 (Chinese Character Grid Practice Generator)
 
-一个自动生成汉字田字格练习PDF的Web应用，适合小学生及汉字学习者使用。可根据需要生成不同数量的汉字练习，支持随机选择汉字并配以《史记》名句作为练习素材。
+一个自动生成汉字田字格练习PDF的Web应用，适合小学生（1 到 6 年级一类和二类字）及汉字学习者使用。可根据需要生成不同数量的汉字练习，支持随机选择汉字并配以《史记》名句作为练习素材。
 
 ## pdf效果
 
@@ -80,6 +80,10 @@ A: 在 `fonts` 目录下替换 `kaitiGBK.ttf` 文件，或修改 `app.py` 中的
 
 **Q: 为什么使用田字格?**  
 A: 田字格是中国传统的汉字书写练习格式，有助于练习者掌握汉字的结构和笔画位置。
+
+**Q: 汉字字库是怎么获得的，是最新的吗**  
+A:1～6年级一类字二类字是从小学语文最新课标（人教版）课本里的，另外会随机从《史记》里抽取部分字生成。
+
 
 ## 贡献指南
 
