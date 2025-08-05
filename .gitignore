@@ -1,13 +1,14 @@
-# Python
+# Build and packaging
+build/
+dist/
+*.spec
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
 env/
-build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -40,6 +41,8 @@ static/*.zip
 !static/logo*.png
 !static/logo*.ico
 !static/logo*.icns
+static/icons/
+static/logo.iconset/
 
 # OS Files
 .DS_Store
@@ -63,6 +66,7 @@ Thumbs.db
 *.spec
 pip-log.txt
 pip-delete-this-directory.txt
+README_updated.md
 
 # Jupyter Notebook
 .ipynb_checkpoints
