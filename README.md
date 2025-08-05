@@ -102,4 +102,5 @@ A:1～6年级一类字二类字是从小学语文最新课标（人教版）课�
 ## 鸣谢
 
 - 感谢[ReportLab](https://www.reportlab.com/)提供PDF生成支持
+- 感谢[hunterhug]提供的《史记》古文和现代文资料，另有中国历史书籍可前往查看获取👉 (https://github.com/hunterhug/china-history)
 - 感谢所有开源字体项目和贡献者
