@@ -80,6 +80,7 @@ app_backup.py
 app.py.bak
 app.py.kaiti
 *_bak.py
+wordwriter.code-workspace
 
 # Temporary scripts
 test_*.py
