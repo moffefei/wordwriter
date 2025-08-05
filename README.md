@@ -1,11 +1,11 @@
-# 汉字田字格练习生成器 (Chinese Character Grid Practice Generator)
+<img width="689" height="528" alt="image" src="https://github.com/user-attachments/assets/a233d91b-ba79-4824-af28-9071ebe5aecd" /># 汉字田字格练习生成器 (Chinese Character Grid Practice Generator)
 
 一个自动生成汉字田字格练习PDF的Web应用，适合小学生及汉字学习者使用。可根据需要生成不同数量的汉字练习，支持随机选择汉字并配以《史记》名句作为练习素材。
 
 ## pdf效果
 
 <img width="695" height="896" alt="image" src="https://github.com/user-attachments/assets/dfcdcfc0-d8a5-45c2-85cd-cb79cc9b3aba" />
-<img width="695" height="896" alt="image" src="https://github.com/user-attachments/assets/554bd290-0b05-4153-8e31-2e2389fb3393" />
+<img width="695" height="528" alt="image" src="https://github.com/user-attachments/assets/f1496f66-0cda-49a1-ba7f-a6e27e43370e" />
 
 ## 功能特点
 
