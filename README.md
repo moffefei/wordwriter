@@ -1,6 +1,11 @@
 # 汉字田字格练习生成器 (Chinese Character Grid Practice Generator)
 
-一个自动生成汉字田字格练习PDF的Web应用，适合小学生及汉字学习者使用。可根据需要生成不同数量的汉字练习，支持随机选择汉字并配以《史记》名句作为练习素材。
+一个自动生成汉字田字格练习PDF的Web应用，适合小学生（1 到 6 年级一类和二类字）及汉字学习者使用。可根据需要生成不同数量的汉字练习，支持随机选择汉字并配以《史记》名句作为练习素材。
+
+## pdf效果
+
+<img width="695" height="896" alt="image" src="https://github.com/user-attachments/assets/dfcdcfc0-d8a5-45c2-85cd-cb79cc9b3aba" />
+<img width="695" height="528" alt="image" src="https://github.com/user-attachments/assets/f1496f66-0cda-49a1-ba7f-a6e27e43370e" />
 
 ## 功能特点
 
@@ -76,6 +81,10 @@ A: 在 `fonts` 目录下替换 `kaitiGBK.ttf` 文件，或修改 `app.py` 中的
 **Q: 为什么使用田字格?**  
 A: 田字格是中国传统的汉字书写练习格式，有助于练习者掌握汉字的结构和笔画位置。
 
+**Q: 汉字字库是怎么获得的，是最新的吗**  
+A:1～6年级一类字二类字是从小学语文最新课标（人教版）课本里的，另外会随机从《史记》里抽取部分字生成。
+
+
 ## 贡献指南
 
 欢迎提交Pull Request或Issues！如需贡献代码，请:
@@ -93,4 +102,5 @@ A: 田字格是中国传统的汉字书写练习格式，有助于练习者掌�
 ## 鸣谢
 
 - 感谢[ReportLab](https://www.reportlab.com/)提供PDF生成支持
+- 感谢[hunterhug](https://github.com/hunterhug/china-history)提供的《史记》古文和现代文资料，另有中国历史书籍可前往查看获取
 - 感谢所有开源字体项目和贡献者
