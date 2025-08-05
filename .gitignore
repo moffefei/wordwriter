@@ -81,6 +81,7 @@ app.py.bak
 app.py.kaiti
 *_bak.py
 wordwriter.code-workspace
+CODE_REVIEW_SUMMARY.md
 
 # Temporary scripts
 test_*.py
