@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 田字格外框 -->
+  <rect x="20" y="20" width="160" height="160" fill="white" stroke="#000" stroke-width="4"/>
+  
+  <!-- 田字格内部线条 -->
+  <line x1="20" y1="100" x2="180" y2="100" stroke="#e53935" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="100" y1="20" x2="100" y2="180" stroke="#e53935" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="20" y1="20" x2="180" y2="180" stroke="#e53935" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="180" y1="20" x2="20" y2="180" stroke="#e53935" stroke-width="2" stroke-dasharray="4"/>
+  
+  <!-- 汉字"字" -->
+  <text x="100" y="125" font-family="SimHei, 黑体, Arial, sans-serif" font-size="100" text-anchor="middle" font-weight="bold">字</text>
+</svg>

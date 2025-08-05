@@ -1,0 +1,93 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Flask
+instance/
+.webassets-cache
+
+# Log Files
+*.log
+wordwriter.log
+
+# Generated Files
+static/*.pdf
+static/*.zip
+!static/logo*.svg
+!static/logo*.png
+!static/logo*.ico
+!static/logo*.icns
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE Files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Distribution / packaging
+.Python
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# dotenv
+.env
+
+# Backup and temporary files
+*.bak
+*.backup
+app_backup.py
+app.py.bak
+app.py.kaiti
+*_bak.py
+
+# Temporary scripts
+test_*.py
+fix_*.py
+modify_*.py
+improve_*.py
+update_*.py
+simplify_*.py
+
+# Font backups
+fonts_backup/
